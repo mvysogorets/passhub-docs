@@ -12,10 +12,11 @@ By no means is the PassHub extension a silver bullet, but rather a semi-manual a
 
 ## Installation
 
-### Chrome, Edge, Opera, Vivaldi..
+### Chrome, Opera, Vivaldi..
 
 
-On a desktop Chrome, Microsoft Edge, Opera, Vivaldi, Brave, and other Chromium-based browsers follow this link: https://chrome.google.com/webstore/detail/passhub/bamjbfhfacpdkenilcibkmpdahkgfejh
+On a desktop Chrome, Microsoft Edge, Opera, Vivaldi, Brave, and other Chromium-based browsers, follow this link: 
+https://chrome.google.com/webstore/detail/passhub/bamjbfhfacpdkenilcibkmpdahkgfejh
 
 Alternatively, go to the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) and find the PassHub.net extension. Click **Add to Chrome**.
 
@@ -26,11 +27,23 @@ NOTE: In the Chrome browser, pin the PassHub extension icon to the toolbar. To d
 Jump to the section [how to use the extension](#how-to-use) below.
 
 
+### Microsoft Edge
+
+Microsoft has its own add-ons (extensions) repository; you can use the following link to install the Passhub add-on: 
+https://microsoftedge.microsoft.com/addons/detail/passhubnet/epmmbjnnghpopnhkilkoomaahpinjpkc?hl=en-US
+
+Alternatively, due to Microsoft Edge and Chrome extensions compatibility, you may use the Chrome extension: https://chrome.google.com/webstore/detail/passhub/bamjbfhfacpdkenilcibkmpdahkgfejh.
+
+From the user point of view, the Edge and Chrome extensions are essentially identical, including the "pin" step, described above.  
+
+Jump to the section [how to use the extension](#how-to-use) below.
+
+
 ### Safari Browser on Mac
 
 To get the Safari extension, go to the Mac App Store https://apps.apple.com/ch/app/passhub-net/id6478985505?l=en-GB&mt=12 and install the app as usual. 
 
-Next go to the Safari menu and navigate to Safari > Settings (or Preferences).
+Next, go to the Safari menu and navigate to Safari > Settings (or Preferences).
 
 Click Extensions.
 
@@ -45,17 +58,17 @@ The PassHub icon appears to the left of the page address. When Safari asks for t
 
 ## How To Use
 
-The extension works in the presence of an open PassHub.net tab. The browser extension communicates with the PassHub tab to find the appropriate credentials. You must be signed in to PassHub to use the extension.
+The extension works in the presence of an open PassHub.net tab, as well as with business implementaions - \*.passhub.us or \*.passhub.eu. The browser extension communicates with the PassHub tab to find the appropriate credentials. You must be signed in to PassHub to use the extension.
 
 #### 1. Autofill Login Form
 
-Open the Login page of the website you want to sign in. Click the PassHub Logo in the upper right corner. The extension consults the PassHub browser tab if appropriate accounts are stored for the current page URL. There may be more than one suitable account. All will be shown in the extension's pop-up.
+Open the login page of the website you want to sign in to. Click the PassHub logo in the upper right corner. The extension consults the PassHub browser tab if appropriate accounts are stored for the current page URL. There may be more than one suitable account. All will be shown in the extension's pop-up.
 
 Choose the desired account. When the login form is filled in, click the "Sign in" button on the form.
 
 ![PassHub Extension popup](/img/PassHubExtScreen640.png)
 
-**NOTE:** Some sites use one page for the username and another for the password. Just click the Browser extension icon on every page. The extension is smart enough to substitute proper credentials.
+**NOTE:** Some sites use one page for the username and another for the password. Just click the browser extension icon on every page. The extension is smart enough to substitute proper credentials.
 
 #### 2. Alternatively
 
@@ -77,7 +90,7 @@ When the extension icon is clicked on a page with a payment card form, the exten
 
 ## Firefox
 
-Due to the difference in browser architecture, the Firefox and Chrome/Safari extensions are different too. Particularly, The Firefox extension is more self-contained: you need to log in directly to the extension.
+Due to differences in browser architecture, the Firefox and Chrome/Safari extensions are different too. Particularly, the Firefox extension is more self-contained: you need to log in directly to the extension.
 
 ### Installation
 
@@ -95,9 +108,9 @@ Now the PassHub icon appears in the upper right corner. It is safe to run the ex
 
 ![Extension Icon](/img/firefox-extension-icon.png)
 
-### Configuring the Extention
+### Configuring the Extension
 
-As opposed to the Chrome extension, the Firefox extension can only work with only one predefined PassHub server. To use the extension with your own PassHub instance, do the following:
+As opposed to the Chrome extension, the Firefox extension can only work with one predefined PassHub server. To use the extension with your own PassHub instance, do the following:
 
 - Right-click on the extension icon and select the 'Manage Extension' item.
 
