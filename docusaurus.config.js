@@ -11,7 +11,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   baseUrl: '/doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/passhub-logo-128.png',
   organizationName: 'WWPass', // Usually your GitHub org/user name.
   projectName: 'PassHub', // Usually your repo name.
 
@@ -58,18 +58,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           src: 'img/new_ph_logo.svg',
         },
         items: [
-/*          
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-*/          
-          
-/*
-          {to: '/blog', label: 'Blog', position: 'left'},
+          /*          
+                    {
+                      type: 'doc',
+                      docId: 'intro',
+                      position: 'left',
+                      label: 'Tutorial',
+                    },
           */
+
+          /*
+                    {to: '/blog', label: 'Blog', position: 'left'},
+                    */
           {
             href: 'https://github.com/wwpass/passhub',
             html: '<img src="/doc/img/github.svg" width=24 height=24 style="margin-top:5px">',
@@ -86,22 +86,22 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       footer: {
         style: 'dark',
-/*        
-        links: [
-          {
-            href: 'https://github.com/wwpass/passhub',
-            html: '<img src="img/github.svg" width=24 height=24 style="margin-top:5px">',
-            position: 'right',
-            className: 'nav-link-github '
-          },
-          {
-            href: 'https://twitter.com/PassHubNet',
-            html: '<img src="img/twitter.svg" width=24 height=24 style="margin-top:5px">',
-            position: 'right',
-            className: 'nav-link-twitter'
-          },
-        ],
-*/
+        /*        
+                links: [
+                  {
+                    href: 'https://github.com/wwpass/passhub',
+                    html: '<img src="img/github.svg" width=24 height=24 style="margin-top:5px">',
+                    position: 'right',
+                    className: 'nav-link-github '
+                  },
+                  {
+                    href: 'https://twitter.com/PassHubNet',
+                    html: '<img src="img/twitter.svg" width=24 height=24 style="margin-top:5px">',
+                    position: 'right',
+                    className: 'nav-link-twitter'
+                  },
+                ],
+        */
         copyright: `Copyright © ${new Date().getFullYear()} WWPass. Built with Docusaurus.`,
       },
       prism: {
