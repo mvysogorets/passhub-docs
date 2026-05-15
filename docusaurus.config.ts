@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://passhub.net',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/doc/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -30,17 +30,19 @@ const config: Config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
+  /*
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+*/
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: "/"
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //          editUrl:
@@ -77,8 +79,9 @@ const config: Config = {
     navbar: {
       title: 'docs',
       logo: {
-        alt: 'PaasHub Logo',
+        alt: 'PassHub Logo',
         src: 'img/new_ph_logo.svg',
+        href: '/doc/',
       },
       items: [
         /*
