@@ -136,4 +136,4 @@ The extension fills in the login form with the selected credentials. You only ha
 
 ![Form filled](/img/firefox-extension-form-filled.png)
 
-As for payment card autofill, the Firefox extension and Chrome extension behave the same way; see the [Payment Card autofill](/doc/browser-extension#3-payment-card-autofill) section above.
+As for payment card autofill, the Firefox extension and Chrome extension behave the same way; see the [Payment Card autofill](/browser-extension#3-payment-card-autofill) section above.

@@ -12,7 +12,7 @@ PassHub is an open-source project with the code available on GitHub. See https:/
 You can deploy an instance of PassHub on your company servers, either hardware server, located in a data center or a Virtual Private Server (VPS). This way you have full control of your data.
 
 Follow the [installation instructions](https://github.com/wwpass/passhub/blob/master/InstallingPassHubOnLinux.md) for Ubuntu servers.
-The PassHub architecture can fit the service on a single host or on three hosts with a replicated database and a few web servers. It is possible to bind the PassHub to the company's Active Directory for uniform user rights control. Alternatively, you may use the built-in user control feature of PassHub for Business, [see below](/doc/passhub-business#passhub-user-management).
+The PassHub architecture can fit the service on a single host or on three hosts with a replicated database and a few web servers. It is possible to bind the PassHub to the company's Active Directory for uniform user rights control. Alternatively, you may use the built-in user control feature of PassHub for Business, [see below](/passhub-business#passhub-user-management).
 
 ## PassHub as a Service
 
