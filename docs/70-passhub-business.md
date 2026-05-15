@@ -165,7 +165,7 @@ Copy the Application Client ID and Directory Tenant ID and store it for Step 7
 Click "Manage" on the left, then "Authentication", at the top click the "Add a platform" button. then click "Web": 
 ![Add Platform](/img/add_platform.png)  
 
-Make the redirect url <https://yourdomain.com/oauth-callback.php> and change yourdomain.com to your companies Passhub for Business website,
+Make the redirect url `https://yourdomain.com/oauth-callback.php` and change yourdomain.com to your companies Passhub for Business website,
 then select "Access tokens" And "ID Tokens",
 Finally click configure.
 ![Redirect URL](/img/redirect_url.png)
