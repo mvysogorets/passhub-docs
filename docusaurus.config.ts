@@ -77,10 +77,11 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'docs',
+      //      title: 'docu',
       logo: {
         alt: 'PassHub Logo',
-        src: 'img/new_ph_logo.svg',
+        //        src: 'img/new_ph_logo.svg',
+        src: 'img/passhub_logo_2d2-white.svg',
         href: '/doc/',
       },
       items: [
