@@ -3,6 +3,11 @@ sidebar_label: "Browser extension: autofill"
 sidebar_position: 50
 ---
 
+import Options0 from '/img/options-0.jpg';
+import Options1 from '/img/options-1.jpg';
+import Options2 from '/img/options-2.jpg';
+import Options3 from '/img/options-3.jpg';
+
 # Browser Extension for PassHub.net
 
 As opposed to annoying password manager extensions, the PassHub extension is a non-intrusive tool to fill username/password fields in login forms and bank card data on payment pages.
@@ -60,7 +65,7 @@ The PassHub icon appears to the left of the page address. When Safari asks for t
 
 The extension works in the presence of an open PassHub.net tab, as well as with business implementaions - \*.passhub.us or \*.passhub.eu. The browser extension communicates with the PassHub tab to find the appropriate credentials. You must be signed in to PassHub to use the extension.
 
-#### 1. Autofill Login Form
+### 1. Autofill Login Form
 
 Open the login page of the website you want to sign in to. Click the PassHub logo in the upper right corner. The extension consults the PassHub browser tab if appropriate accounts are stored for the current page URL. There may be more than one suitable account. All will be shown in the extension's pop-up.
 
@@ -70,7 +75,7 @@ Choose the desired account. When the login form is filled in, click the "Sign in
 
 **NOTE:** Some sites use one page for the username and another for the password. Just click the browser extension icon on every page. The extension is smart enough to substitute proper credentials.
 
-#### 2. Alternatively
+### 2. Alternatively
 
 You may click the website URL directly on the PassHub page or in the password record dialog.
 
@@ -82,11 +87,31 @@ The selected site tab then opens and the login form is automatically filled in.
 
 **NOTE:** Sometimes, the username/password form appears with some delay, so the last method only opens the login page but does not fill the form. Just continue by opening the extension popup as described above.
 
-#### 3. Payment Card Autofill
+### 3. Payment Card Autofill
 
 When the extension icon is clicked on a page with a payment card form, the extension detects specific field names and shows a list of stored cards. Just select the desired card to autofill its data.
 
 ![Card autofill](/img/card-autofill.png)
+
+
+### Chrome extension and Passhub for Business
+
+The PassHub extension works with any PassHub server, not only passhub.net. For example, when you log in to yourcompany.passhub.us, the web page notifies the extension of its availability and the extension communicates with yourcompany.passhub.us to retrieve your credentials for autofill. If you then log in to passhub.net, the extension switches back to passhub.net data. In short, the extension always uses the last PassHub server you logged into.
+
+The method described in [section 2 above](#2-alternatively) works with all PassHub servers simultaneously.
+
+When you are not logged in to any PassHub server, the PassHub extension shows a link to passhub.net so you can easily open the login page. This is merely a suggestion, not a restriction — you can still log in to yourcompany.passhub.us (or .eu, .com) and continue as usual. The default PassHub server can be configured in the extension options dialog: right-click the extension icon, choose "Options", and enter your business PassHub address. This setting simply saves you time by providing a quick link.
+
+
+<div style={{marginBottom: 30}}>
+<img src={Options0}  style={{ width: 400, marginRight: 30, marginBottom:65 }} /><img src={Options1}  style={{ width: 250 }} />
+</div>
+
+When you are not logged in to any PassHub server, the PassHub extension shows a link to passhub.net so you can easily open the login page. This is merely a suggestion, not a restriction — you can still log in to yourcompany.passhub.us (or .eu, .com) and continue as usual. The default PassHub server can be configured in the extension options dialog: right-click the extension icon, choose "Options"
+
+<img src={Options2}  style={{ width: 400, marginRight:30, marginBottom:30 }} /> <img src={Options3}  style={{ width: 400, marginBottom:30 }} />
+
+and enter your business PassHub address. This setting simply saves you time by providing a quick link.
 
 ## Firefox
 
