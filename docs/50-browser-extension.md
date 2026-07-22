@@ -27,7 +27,8 @@ Alternatively, go to the [Chrome Web Store](https://chrome.google.com/webstore/c
 
 NOTE: In the Chrome browser, pin the PassHub extension icon to the toolbar. To do so, click on the puzzle piece-shaped Extensions icon next to the account icon and then click the pushpin next to the PassHub extension.
 
-![Chrome pin extension](/img/ChromePinExtension.png)
+![Pin Chrome Extension](/img/pin-extension.jpg)
+
 
 Jump to the section [how to use the extension](#how-to-use) below.
 
@@ -71,7 +72,8 @@ Open the login page of the website you want to sign in to. Click the PassHub log
 
 Choose the desired account. When the login form is filled in, click the "Sign in" button on the form.
 
-![PassHub Extension popup](/img/PassHubExtScreen640.png)
+![PassHub Extension popup](/img/extension-popup.jpg)
+
 
 **NOTE:** Some sites use one page for the username and another for the password. Just click the browser extension icon on every page. The extension is smart enough to substitute proper credentials.
 
@@ -100,18 +102,16 @@ The PassHub extension works with any PassHub server, not only passhub.net. For e
 
 The method described in [section 2 above](#2-alternatively) works with all PassHub servers simultaneously.
 
-When you are not logged in to any PassHub server, the PassHub extension shows a link to passhub.net so you can easily open the login page. This is merely a suggestion, not a restriction — you can still log in to yourcompany.passhub.us (or .eu, .com) and continue as usual. The default PassHub server can be configured in the extension options dialog: right-click the extension icon, choose "Options", and enter your business PassHub address. This setting simply saves you time by providing a quick link.
-
+When you are not logged in to any PassHub server, the PassHub extension shows a link to passhub.net so you can easily open the login page. This is merely a suggestion, not a restriction — you can still log in to yourcompany.passhub.us (or .eu, .com) and continue as usual. The default PassHub server can be configured in the extension options dialog: right-click the extension icon, choose "Options"
 
 <div style={{marginBottom: 30}}>
 <img src={Options0}  style={{ width: 400, marginRight: 30, marginBottom:65 }} /><img src={Options1}  style={{ width: 250 }} />
 </div>
 
-When you are not logged in to any PassHub server, the PassHub extension shows a link to passhub.net so you can easily open the login page. This is merely a suggestion, not a restriction — you can still log in to yourcompany.passhub.us (or .eu, .com) and continue as usual. The default PassHub server can be configured in the extension options dialog: right-click the extension icon, choose "Options"
-
-<img src={Options2}  style={{ width: 400, marginRight:30, marginBottom:30 }} /> <img src={Options3}  style={{ width: 400, marginBottom:30 }} />
-
 and enter your business PassHub address. This setting simply saves you time by providing a quick link.
+
+<img src={Options2}  style={{ height: 220, marginRight:30, marginBottom:30 }} /> <img src={Options3}  style={{ width: 400, marginBottom:30 }} />
+
 
 ## Firefox
 
