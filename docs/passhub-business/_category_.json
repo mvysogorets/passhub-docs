@@ -1,4 +1,8 @@
 {
     "label": "Passhub for Business",
-    "position": 69
+    "position": 69,
+    "link": {
+        "type": "doc",
+        "id": "passhub-business/passhub-business"
+    }
 }

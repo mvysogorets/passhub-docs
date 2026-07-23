@@ -116,7 +116,7 @@ define('MS_SENTINEL_CLIENT_ID', "cccccccc-cccc-cccc-cccc-cccccccccccc");
 define('MS_SENTINEL_CLIENT_SECRET',"ssssssssssssssssssssssssssssssssssssssss");
 define('MS_SENTINEL_DCE_ENDPOINT', "https://*the-dce-name*-igcm.eastus-1.ingest.monitor.azure.com");
 define('MS_SENTINEL_DCR_IMMUTABLE_ID', "dcr-dddddddddddd");
-define('MS_SENTINEL_STREAM_NAME','Custom-PasshubAuditLogs_CL'); // Data Source Name
+define('MS_SENTINEL_STREAM_NAME','Custom-nnnnnnnnn_CL'); // Data Source Name
 ```
 
 Now, in addition to collecting events in its own database, Passhub will send each event's data to the Sentinel table.

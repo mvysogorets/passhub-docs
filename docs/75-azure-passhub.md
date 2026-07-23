@@ -113,4 +113,4 @@ Step 4: Obtain the crt file and move both the Private Key you create and the .cr
 
 Your Local Instance of Passhub is ready to go and you may now create an account.
 
-If you would like to manage users of Passhub through Azure instead of Passhub's built in User Management then you may follow [this document](https://passhub.net/doc/passhub-business#deploying-passhub-with-microsoft-api) explaining how to use Entra ID with Microsoft Graph API for Passhub User management.
+If you would like to manage users of Passhub through Azure instead of Passhub's built in User Management then you may follow [this document](https://passhub.net/doc/passhub-business/passhub-business#deploying-passhub-with-microsoft-api) explaining how to use Entra ID with Microsoft Graph API for Passhub User management.
