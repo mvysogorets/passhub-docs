@@ -36,7 +36,7 @@ PassHub.net fully implements the tree-like folders and subfolders model. This fi
 
 ### Sharing
 
-Dashlane shares records on a per-item basis. You cannot share a group of credentials in a single step. The recipient gets either limited or full rights. With limited rights, the recipient cannot see passwords, it is only possible to login with form Autofill (see [Privacy](#privacy)).
+Dashlane shares records on a per-item basis. You cannot share a group of credentials in a single step. The recipient gets either limited or full rights. With limited rights, the recipient cannot see passwords, it is only possible to login with form Autofill (see [Security and Privacy Pitfalls](#security-and-privacy-pitfalls)).
 
 :::note PassHub.net
 

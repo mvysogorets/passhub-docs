@@ -13,10 +13,48 @@ Fill the form shown below, where
 
 - _Title_ - identifies the account entry. It is the only required field in the form.
 - _Username/password_ - the credentials of the account. Use the provided random password generator to get a strong password by simply clicking **Generate Password**.
-- _URL_ - network name or IP address of the resource.
+- _Website address_ - network name or IP address of the resource.
+- _Secondary URL_ - alternative URL, may be used for 
 - _Notes_ - specific notes, instructions, or any other messages you want to include. These are safely encrypted and stored with each entry.
 
 ![Password dialog](/img/passwordDialog.png)
+
+### Secondary URL
+
+There are websites for which the basic model of a single login page with username/password fields does not apply. While you can still manually copy and paste credentials, browser extension autofill fails. The Secondary URL parameter of the Passhub password record may help. Consider the following use cases:
+
+- a site with two login pages
+- a site with many login pages, which can be described using wildcard notation, e.g. <code>*.somesite.com</code>. See below for details.
+- a site that uses any form of OpenID Connect (e.g. *Login with Google*). For such a site, there is no dedicated login page. Instead, the user is redirected to the identity provider (e.g. Google's page <code>https://accounts.google.com/v3/signin/identifier?continue=https..</code>). See below how to use Passhub with Google and Microsoft accounts.
+
+### Wildcards in the URL
+
+You can use an asterisk symbol <b>*</b> as a wildcard in the URL string the same way as you do for filenames. The asterisk stands for any string (including an empty string), allowing greater flexibility in the browser extension autofill.
+
+We do not restrict the wildcard to the subdomain portion only, so use it at your own risk.
+
+Examples:
+
+- `*.mybank.com` may be used for login.mybank.com and signin.mybank.com, for example.
+- `*mybank.com` may be used not only for mybank.com and login.mybank.com but also for fakemybank.com. 
+
+### Google Accounts Best Practice
+
+A Google account is used across many Google services (gmail.com, drive.google.com, youtube.com, etc.) and on third-party sites that implement the "Sign in with Google" feature. Google uses OpenID Connect to authenticate users. In this case, the actual login URL (https://accounts.google.com/v3/signin/identifier?continue=https...) differs from the initial URL (gmail.com or drive.google.com). Moreover, the URL may contain query parameters specific to a particular context or service.
+
+Because Google accounts are used so widely, it is not unusual to have more than one of them.
+
+To allow credential autofill on Google login pages, we recommend the following:
+
+- Set the Title of the Google account to match the username (xxx@gmail.com) so you can select the correct account in the browser extension.
+- Set the URL to _accounts.google.com_.
+
+### Microsoft Accounts
+
+The guidance for Google accounts also applies to Microsoft accounts (outlook.com, office.com, azure.com, etc.).
+
+For credential autofill, use the URL _https://login.microsoftonline.com_ or _https://login.live.com_ (both variants work at the time of writing).
+
 
 ### Google Authenticator (TOTP, Time-based One-Time Password)
 
