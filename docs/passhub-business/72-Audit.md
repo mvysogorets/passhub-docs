@@ -59,11 +59,11 @@ Now click the **Client Credentials** link, go to the **New client secret** page,
 1. Search for "Data Collection Endpoints" in the Azure page's top search bar
 2. Click `+Create`
 3. Use an existing resource group or create a new one (e.g. `my-test-dce`) and set the resource group to `Sentinel`
-   
+
 4. Click **Review + Create**
 5. On the next page, click **Create**
 6. When the new DCE appears in the DCE list, click on its link, and get the **Log ingestion** parameter:
-   
+
    https://*the-dce-name*-igcm.eastus-1.ingest.monitor.azure.com
 
 
@@ -97,7 +97,7 @@ Now click the **Client Credentials** link, go to the **New client secret** page,
    ```
 
 8. Get the DCR ID: **Home > Resource Groups > Sentinel**, select `myTestDCR`, and copy the **Immutable ID** `dcr-dddddddddddddddddd`
-   
+
 #### Get the stream name
 
 **Resource Group > Sentinel**: Select your DCR. On the DCR page, select **Data Sources** on the left, then
@@ -111,7 +111,7 @@ Add the following constants, obtained above, to the Passhub configuration file:
 
 ```php
 define('MS_SENTINEL_ENABLED', true);
-define('MS_SENTINEL_TENANT_ID',"tttttttt-tttt-tttt-tttt-tttttttttttt");  
+define('MS_SENTINEL_TENANT_ID',"tttttttt-tttt-tttt-tttt-tttttttttttt");
 define('MS_SENTINEL_CLIENT_ID', "cccccccc-cccc-cccc-cccc-cccccccccccc");
 define('MS_SENTINEL_CLIENT_SECRET',"ssssssssssssssssssssssssssssssssssssssss");
 define('MS_SENTINEL_DCE_ENDPOINT', "https://*the-dce-name*-igcm.eastus-1.ingest.monitor.azure.com");
@@ -121,3 +121,41 @@ define('MS_SENTINEL_STREAM_NAME','Custom-nnnnnnnnn_CL'); // Data Source Name
 
 Now, in addition to collecting events in its own database, Passhub will send each event's data to the Sentinel table.
 
+## CrowdStrike Next-Gen SIEM
+
+If you use CrowdStrike then you may connect your PassHub to the Next-Gen SIEM.
+<br/>Here are the main steps:
+
+1. Make a Custom Connector and Parser inside CrowdStrike
+2. Configure parameters for Passhub
+
+### 1. Customize Next-Gen SIEM
+
+1. From the Main Page go to **Next Gen SIEM** then under the **Log Management** tab go to **Data Onboarding**
+
+#### Create the HEC / HTTP Connector
+
+2. Create a new connection and click on "Add Connection"
+3. Look for the **HEC / HTTP Event Connector** by the vendor of **Generic** and author of **CrowdStrike**.
+4. Then on the right, click on **Configure**. From this we can now configure the custom connector to work with Passhub.
+5. Now type in a connection name such as: **Passhub Connector**
+
+#### Create the Custom Parser
+
+6. Click on "Create new parser", give it a name such as: Passhub Parser.
+7. Now you must download the custom parser file [found here](./crowdstrikeWWPassParser.txt) which tells CrowdStrike how to read Passhub Logs, then click on the arrow, choose "Import" and upload the recently installed file.
+8. From there you can copy the "API URL" and generate an "API Key" and finally copy the CID as well.
+
+### 2. Configure Passhub
+
+Add the variables that were retrieved/generated in Step 1 and input into the Config.php file
+
+```php
+define('CROWDSTRIKE_INGEST_URL', 'https://your-logscale-host/api/v1/ingest/hec/event');
+define('CROWDSTRIKE_HEC_TOKEN', 'your_hec_ingest_token_here');
+define('CROWDSTRIKE_HEC_SOURCE', 'passhub');
+define('CROWDSTRIKE_HEC_SOURCETYPE', 'passhub:audit');
+define('CROWDSTRIKE_HEC_HOST', 'passhub.company.com');
+```
+
+Now, in addition to collecting events in its own database, Passhub will send each event's data to the CrowdStrike SIEM.

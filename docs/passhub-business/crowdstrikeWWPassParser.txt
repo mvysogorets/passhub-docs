@@ -1,0 +1,145 @@
+/*
+# Log Parsing Template
+# Vendor: PassHub
+# Product: PassHub IAM Audit
+# Format: JSON
+
+CrowdStrike NG SIEM Parsing Standard
+*/
+
+
+// =====================================================================
+// STATIC METADATA DEFINITIONS
+// =====================================================================
+
+| Vendor := "PassHub"
+| Parser.version := "1.0.0"
+| ecs.version := "8.17.0"
+| Cps.version := "2.0.0"
+| event.module := "passhub"
+| observer.type := "server"
+
+
+// =====================================================================
+// PREPARSE - JSON FORMAT
+// =====================================================================
+
+| parseJson(prefix="Vendor.", excludeEmpty="true", handleNull="discard")
+
+
+// =====================================================================
+// TIMESTAMP
+// =====================================================================
+
+| parseTimestamp(
+    field="Vendor.timestamp",
+    format="yyyy-MM-dd'T'HH:mm:ssXXX",
+    timezone="UTC"
+)
+
+
+// =====================================================================
+// NORMALIZATION
+// =====================================================================
+
+| event.kind := "event"
+
+| array:append(
+    array="event.category[]",
+    values=["configuration"]
+)
+
+| array:append(
+    array="event.type[]",
+    values=["change"]
+)
+
+
+// =====================================================================
+// EVENT DETAILS
+// =====================================================================
+
+| event.action := Vendor.event_data.operation
+
+| event.dataset := Vendor.event_type
+
+| event.provider := Vendor.source
+
+
+// =====================================================================
+// USER / IDENTITY FIELDS
+// =====================================================================
+
+| user.name := Vendor.event_data.user
+
+| user.email := Vendor.event_data.user
+
+| user.full_name := Vendor.event_data.actor
+
+
+// =====================================================================
+// ORGANIZATION FIELDS
+// =====================================================================
+
+| organization.name := Vendor.event_data.company
+
+
+// =====================================================================
+// GROUP INFORMATION
+// =====================================================================
+
+| group.name := Vendor.event_data.group
+
+
+// =====================================================================
+// SOURCE NETWORK INFORMATION
+// =====================================================================
+
+| source.ip := Vendor.metadata.source_ip
+
+
+// =====================================================================
+// USER AGENT
+// =====================================================================
+
+| user_agent.original := Vendor.metadata.user_agent
+
+
+// =====================================================================
+// SESSION INFORMATION
+// =====================================================================
+
+| session.id := Vendor.metadata.session_id
+
+
+// =====================================================================
+// HOST INFORMATION
+// =====================================================================
+
+| host.name := Vendor.metadata.server_name
+
+
+// =====================================================================
+// PASSHUB CUSTOM FIELDS
+// =====================================================================
+
+| passhub.event_type := Vendor.event_type
+
+| passhub.category := Vendor.category
+
+| passhub.severity := Vendor.severity
+
+
+// =====================================================================
+// CLEANUP TEMPORARY FIELDS
+// =====================================================================
+
+| drop([
+    "Vendor.timestamp",
+    "Vendor.event_type",
+    "Vendor.source",
+    "Vendor.category",
+    "Vendor.severity",
+    "Vendor.event_data",
+    "Vendor.metadata"
+])
