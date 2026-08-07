@@ -31,16 +31,16 @@ To get to the user management page, click the "Account" icon in the upper right 
 
 ![IAM menu item](/img/iam_menu_item1.png)
 
-On the user management page, you can invite/authorize a new user to create an account with their email address. 
+On the user management page, you can invite/authorize a new user to create an account with their email address.
 
-Use the "status" column to control the user status: 
+Use the "status" column to control the user status:
 
 - Admin: Site administrator
 - Disabled: Temporarily revoke user access
 - Active: Normal user
 
 
-You can also delete user accounts, but this is a one-way operation: any unshared user data will be completely lost. The disable operation is safe and reversible. 
+You can also delete user accounts, but this is a one-way operation: any unshared user data will be completely lost. The disable operation is safe and reversible.
 
 
 ![User Table](/img/user_table.jpg)
@@ -55,7 +55,7 @@ Only site administrators are allowed to access Group management controls. Here i
 ### Step 1. Create a new group
 
 On the "User page", click the "Add Group" button in the "User Groups" pane.
-Select a unique name for the group. 
+Select a unique name for the group.
 
 ![Create Group](/img/create_group.jpg)
 
@@ -65,9 +65,9 @@ Select a unique name for the group.
 Click on a group record and choose "Users" in the group menu.
 
 
-![User Group Menu](/img/user_groups_menu.jpg)  
+![User Group Menu](/img/user_groups_menu.jpg)
 
-"Select user to add" shows a list of users you can include in the group. 
+"Select user to add" shows a list of users you can include in the group.
 
 **Note:**  invited (authorized) users are not listed if they have not created a PassHub account yet (i.e., are not in an active, admin, etc. state).
 
@@ -141,8 +141,6 @@ Repeat this step for the Admin group as well.
 
 **Note:** Save the names of both groups for the config file.
 
-2. Lightweight Directory Access Protocol (LDAPs)
-
 We suggest following through with the Graph API as it is easier however both options are available:
 
 ## Passhub User Management with Azure
@@ -157,20 +155,20 @@ Enter a name e.g. "Passhub API", Leave the rest blank, Then "Register"
 
 ### 2. Copy Application IDs
 
-Copy the Application Client ID and Directory Tenant ID and store it for Step 7 
+Copy the Application Client ID and Directory Tenant ID and store it for Step 7
 ![Copy ID](/img/copy_id.png)
 
 ### 3. Authentication Of Users
 
-Click "Manage" on the left, then "Authentication", at the top click the "Add a platform" button. then click "Web": 
-![Add Platform](/img/add_platform.png)  
+Click "Manage" on the left, then "Authentication", at the top click the "Add a platform" button. then click "Web":
+![Add Platform](/img/add_platform.png)
 
 Make the redirect url `https://yourdomain.com/oauth-callback.php` and change yourdomain.com to your companies Passhub for Business website,
 then select "Access tokens" And "ID Tokens",
 Finally click configure.
 ![Redirect URL](/img/redirect_url.png)
 
-Scroll down to "Advanced Settings" then select Yes on the "Allow public client flows" and click save 
+Scroll down to "Advanced Settings" then select Yes on the "Allow public client flows" and click save
 ![Authentication Save](/img/authentication_save.png)
 
 ### 4. Client Secret
@@ -190,7 +188,7 @@ Choose "Delegated permissions" and we will need 2 specifics ones: "GroupMember.R
 **Note:** Repeat this step again for Application permissions
 ![Add Permissions](/img/add_permissions.png)
 
-Now click on "Grant admin consent for yourdomain.com". 
+Now click on "Grant admin consent for yourdomain.com".
 ![Admin Consent](/img/admin_consent.png)
 
 ### 6. Change Configuration
@@ -217,7 +215,7 @@ define(
 
 ## Deploying PassHub with LDAP
 
-You can deploy PassHub for Business to Azure and connect it with Azure Active Directory via LDAP. 
+You can deploy PassHub for Business to Azure and connect it with Azure Active Directory via LDAP.
 
 1. Create an Azure subscription and Active Directory tenant. Azure Active Directory Domain Services managed domain should be enabled and configured. The following Microsoft tutorial guides through the details of Azure Active Directory Domain Services configuration: [https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-create-instance](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-create-instance)
 
@@ -235,9 +233,9 @@ define(
 
       'base_dn' => "OU=AADDC Users,DC=yourcompany,DC=com",
 
-      // When creating a new user account, 
-      // Passhub identifies a user by the User Principal Name (upn), 
-      // which consists of a user name (logon name), separator (the @ symbol), and 
+      // When creating a new user account,
+      // Passhub identifies a user by the User Principal Name (upn),
+      // which consists of a user name (logon name), separator (the @ symbol), and
       // a domain name (UPN suffix). In case the user provides only username, without
       // @-symbol and domain, the `domain` parameter is added to obtain the UPN
 
